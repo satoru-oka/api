@@ -6,3 +6,8 @@ $id = $parts[5] ?? null;
 
 echo  $resource . ", " . $id;
 echo $_SERVER["REQUEST_METHOD"];
+
+if ($resource != "tasks") {
+    http_response_code(404);
+    exit;
+}
