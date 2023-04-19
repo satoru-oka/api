@@ -20,6 +20,10 @@ class ComposerStaticInit8e146d17117d6eeffce8f12e0d4605e8
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/src',
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -29,6 +33,7 @@ class ComposerStaticInit8e146d17117d6eeffce8f12e0d4605e8
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8e146d17117d6eeffce8f12e0d4605e8::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8e146d17117d6eeffce8f12e0d4605e8::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit8e146d17117d6eeffce8f12e0d4605e8::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit8e146d17117d6eeffce8f12e0d4605e8::$classMap;
 
         }, null, ClassLoader::class);

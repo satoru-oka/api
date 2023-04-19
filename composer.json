@@ -1,5 +1,10 @@
 {
     "require": {
         "stripe/stripe-php": "^10.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
     }
 }
